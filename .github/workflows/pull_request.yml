@@ -1,0 +1,104 @@
+name: Pull request checks
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+  style_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Dependencies
+        run: |
+          # Replace with your specific installation command
+          # Example for Node: pnpm install
+          echo "Install dependencies here"
+
+      - name: Run Linter
+        run: |
+          # Replace with your specific linter command
+          # Example for Node: pnpm run lint
+          echo "Lint code command here"
+
+      - name: Lint commits
+        if: github.event_name == 'pull_request'
+        run: |
+          # Replace with your specific commit linting command
+          # Example for Node: pnpm run commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+          echo "Lint commit command here"
+
+  notify_success:
+    runs-on: ubuntu-latest
+    needs: style_check
+    permissions:
+      pull-requests: write
+    if: success()
+    steps:
+      - name: Comment success
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `### ✅ Pull Request Passed Review
+
+            Your pull request has been successfully reviewed, and there are no issues to address. Excellent work! 🎉
+
+            ### ⏳ What Happens Next?
+
+            The maintainer will now review the final changes, and we look forward to merging your work. Thanks again for your contribution!`
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+            
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["ci-success"]
+            });
+
+  notify_failure:
+    runs-on: ubuntu-latest
+    needs: style_check
+    permissions:
+      pull-requests: write
+    if: failure()
+    steps:
+      - name: Comment failure
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `### ⚠️ Action Needed: Pull Request Review Issues
+
+            Thank you for submitting your pull request! We’ve found some issues that need your attention before we can proceed. Please review the errors, fix them, and resubmit the pull request.
+
+            ### 🛠️ Next Steps
+
+            We’re here to help if you need clarification or assistance in addressing the feedback. Your contribution is important, and we appreciate your effort in improving the project! 🙏`
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["ci-failure"]
+            });

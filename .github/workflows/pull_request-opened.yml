@@ -1,0 +1,55 @@
+name: Pull request opened
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+
+jobs:
+  notify-greet:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Auto assign
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addAssignees({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: [ "username" ]  # Replace with your desired assignee(s)
+            });
+
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: [ "label-name" ]  # Replace with your desired label(s)
+            });
+
+      - name: Greet
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `### 🎉 Welcome to the Project!
+
+            Thank you for opening this pull request and contributing to the project! We're excited to review your changes.
+
+            ### 📖 Contribution Guidelines
+
+            To ensure your contributions align with the project's goals, please take a moment to review our [Contribution Guidelines](URL_HERE). It will help you better understand how to submit effective pull requests and collaborate with the team.
+
+            ### 🚀 Next Steps
+
+            Our team will review your changes soon, and we may provide feedback or request updates. Don't hesitate to reach out if you need assistance. We appreciate your time and effort in helping improve this project!`
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
