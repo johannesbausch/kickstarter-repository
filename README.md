@@ -9,8 +9,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
 
-
-
 <div align="center">
   <a href="https://github.com/johannesbausch/kickstarter-repository">
     <img src="images/logo.webp" alt="Logo" width="310" height="310">
