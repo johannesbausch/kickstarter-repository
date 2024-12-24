@@ -195,6 +195,7 @@ function factorial(n: number): number | string {
     return result;
 }
 ```
+
 ```typescript
 // Example usage
 const number: number = 5;
