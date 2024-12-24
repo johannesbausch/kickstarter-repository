@@ -125,6 +125,13 @@ Before proceeding, ensure you have a package manager installed, such as npm.
   ```
 <br />
 
+<div align="right">
+  
+  [Jump to Top](#top)
+  
+</div>
+<br />
+
 
 ## 2.2. Installation
 
@@ -239,7 +246,13 @@ If you have a suggestion for improvement, please fork this repository and create
 Alternatively, you can open an issue with the "enhancement" tag.
 
 [Guide](https://github.com/johannesbausch/kickstarter-repository/blob/main/docs/HOW_TO_CONTRIBUTE.md)
-<br/>
+
+<div align="right">
+  
+  [Jump to Top](#top)
+  
+</div>
+<br />
 
 
 ## 5.1. Contributors:
