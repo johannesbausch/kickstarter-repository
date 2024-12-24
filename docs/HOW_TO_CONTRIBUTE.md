@@ -208,15 +208,14 @@ To keep your fork synchronized with the original repository, make sure to regula
    git checkout main
    ```
 
-````shell
-git merge upstream/main
-````
+   ```shell
+   git merge upstream/main
+   ```
 
-Push the updated main branch to your fork:
-
-````shell
-git push origin main
-````
+3. Push the updated main branch to your fork:
+   ```shell
+   git push origin main
+   ```
 
 <div align="right">
   
