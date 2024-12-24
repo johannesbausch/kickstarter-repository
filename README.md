@@ -217,19 +217,18 @@ Here, you can guide the user through a step-by-step manual.
 For example, if this documentation is for installing Linux (Debian Distribution) as WSL2, it could look like this:
 
 1. Open PowerShell (as Administrator)
-
 2. Install WSL2:
-  ```shell
+   ```shell
    wsl --install -d Debian
-  ```
+   ```
 3. Start the Subsystem:
-  ```shell
+   ```shell
    wsl
-  ```
+   ```
 4. (...):
-  ```shell
+   ```shell
    (...)
-  ```
+   ```
 
 <div align="right">
   
