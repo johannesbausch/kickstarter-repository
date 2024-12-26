@@ -48,7 +48,7 @@ Before making any modifications, you must first fork the repository to your own 
    git clone https://github.com/your_username/repository-kickstarter.git
    ```
    <br />
-2. **Replace your_username with your GitHub username.**
+2. **Replace `your_username` with your GitHub username.**
    <br />
    <br />
 3. **Navigate into the project directory:**
