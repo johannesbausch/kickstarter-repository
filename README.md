@@ -63,11 +63,15 @@ Because next to the experienced senior developer, there is always a junior that 
 This `README.md` template embraces this ethos because:
 
 * It is very detailed and clear.
+<br />
+<br />
 * It follows a consistent approach.
+<br />
+<br />
 * It emphasizes the "Explain Like I'm Five" philosophy.
 
 This template contains placeholders and can be customized as needed!
-
+<br />
 Fork this project to get started.
 
 <div align="right">
@@ -96,7 +100,7 @@ Languages used:
 ## 1.2. Tools
 
 Tools used:
-
+<br />
 _No specific tools were involved in this process._
 
 <div align="right">
@@ -135,24 +139,30 @@ Before proceeding, ensure you have a package manager installed, such as npm.
 
 Follow the instructions below and run the commands in a shell of your choice.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repository:
+1. **Get a free API Key at [https://example.com](https://example.com)**
+   <br />
+   <br />
+2. **Clone the repository:**
    ```shell
    git clone https://github.com/your_username/your_repository.git
    ```
-3. Install the NPM packages:
+   <br />
+3. **Install the NPM packages:**
    ```shell
    npm install
    ```
-4. Implement the API key in your `config.js`:
+   <br />
+4. **Implement the API key in your `config.js`:**
    ```typescript
    const API_KEY = 'ENTER YOUR API';
    ```
-5. Change the Git remote URL to avoid pushing to the base project by mistake:
+   <br />
+5. **Change the Git remote URL to avoid pushing to the base project by mistake:**
    ```shell
    git remote set-url origin your_username/your_repository
    ```
-6. Confirm the changes:
+   <br />
+6. **Confirm the changes:**
    ```shell
    git remote -v
    ```
@@ -214,16 +224,20 @@ console.log(`The factorial of ${number} is ${factorial(number)}.`);
 Here, you can guide the user through a step-by-step manual. 
 For example, if this documentation is for installing Linux (Debian Distribution) as WSL2, it could look like this:
 
-1. Open PowerShell (as Administrator)
-2. Install WSL2:
+1. **Open PowerShell (as Administrator)**
+   <br />
+   <br />
+2. **Install WSL2:**
    ```shell
    wsl --install -d Debian
    ```
-3. Start the Subsystem:
+   <br />
+3. **Start the Subsystem:**
    ```shell
    wsl
    ```
-4. (...):
+   <br />
+4. **(...):**
    ```shell
    (...)
    ```
