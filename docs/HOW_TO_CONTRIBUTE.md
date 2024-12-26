@@ -28,9 +28,9 @@
 
 Before making any modifications, you must first fork the repository to your own GitHub account.
 
-1. Visit the [repository page](https://github.com/johannesbausch/repository-kickstarter).
-2. Click on the "Fork" button in the top-right corner.
-3. GitHub will create a copy of the repository in your account.
+1. **Visit the [repository page](https://github.com/johannesbausch/repository-kickstarter).**
+2. **Click on the "Fork" button in the top-right corner.**
+3. **GitHub will create a copy of the repository in your account.**
 
 <div align="right">
   
@@ -43,12 +43,15 @@ Before making any modifications, you must first fork the repository to your own 
 
 # 2. Clone Your Fork
 
-1. Open a terminal on your computer and run the following command to clone the repository:
+1. **Open a terminal on your computer and run the following command to clone the repository:**
    ```shell
    git clone https://github.com/your_username/repository-kickstarter.git
    ```
-2. Replace your_username with your GitHub username.
-3. Navigate into the project directory:
+   <br />
+2. **Replace your_username with your GitHub username.**
+   <br />
+   <br />
+3. **Navigate into the project directory:**
    ```shell
    cd /path/to/your/repository-kickstarter
    ```
@@ -66,11 +69,12 @@ Before making any modifications, you must first fork the repository to your own 
 
 To keep your fork up to date with the original repository, you need to add an "upstream" remote.
 
-1. Run the following command in the terminal:
+1. **Run the following command in the terminal:**
    ```shell
    git remote add upstream https://github.com/johannesbausch/repository-kickstarter.git
    ```
-2. Verify that the upstream remote has been added:
+   <br />
+2. **Verify that the upstream remote has been added:**
    ```shell
    git remote -v
    ```
@@ -88,11 +92,12 @@ To keep your fork up to date with the original repository, you need to add an "u
 
 To keep your changes organized and distinct from the main codebase, create a new branch.
 
-1. First, ensure you're on the main branch:
+1. **First, ensure you're on the main branch:**
    ```shell
    git checkout main
    ```
-2. Generate a new branch and switch to it using the following command:
+   <br />
+2. **Generate a new branch and switch to it using the following command:**
    ```shell
    git checkout -b feature/your-desired-feature
    ```
@@ -123,15 +128,16 @@ You’re now ready to modify the code. Open the project in your preferred code e
 
 Once you’ve made your changes, it’s time to commit them to your branch.
 
-1. To see which files have been modified, run:
+1. **To see which files have been modified, run:**
    ```shell
    git status
    ```
-2. Stage your changes:
+   <br />
+2. **Stage your changes:**
    ```shell
    git add .
    ```
-3. Commit your changes along with a clear and descriptive message:
+3. **Commit your changes along with a clear and descriptive message:**
    ```shell
    git commit -m "Added something"
    ```
@@ -147,10 +153,10 @@ Once you’ve made your changes, it’s time to commit them to your branch.
 
 # 7. Push Your Branch to GitHub
 
-Upload your changes to your forked repository on GitHub:
-```shell
-git push origin feature/your-desired-feature
-```
+* Upload your changes to your forked repository on GitHub:
+  ```shell
+  git push origin feature/your-desired-feature
+  ```
 
 <div align="right">
   
@@ -165,11 +171,11 @@ git push origin feature/your-desired-feature
 
 Once your changes are pushed to your fork, it's time to create a pull request (PR) to the original repository.
 
-1. Visit the [original repository](https://github.com/johannesbausch/kicksterter-repository) on GitHub.
-2. Click the "Compare & pull request" button.
-3. Review your changes to make sure everything is correct.
-4. Provide a clear and descriptive title and description for your PR.
-5. Click "Create pull request."
+1. **Visit the [original repository](https://github.com/johannesbausch/kicksterter-repository) on GitHub.**
+2. **Click the "Compare & pull request" button.**
+3. **Review your changes to make sure everything is correct.**
+4. **Provide a clear and descriptive title and description for your PR.**
+5. **Click "Create pull request."**
 
 <div align="right">
   
@@ -183,7 +189,7 @@ Once your changes are pushed to your fork, it's time to create a pull request (P
 # 9. Respond to Review Feedback
 
 After submitting your pull request, a code style check will run automatically, and the repository maintainers may review your code and request changes.
-
+<br />
 If any changes are requested, update your branch locally, commit the changes, and push them to your fork. The pull request will automatically reflect the latest updates.
 
 <div align="right">
@@ -199,20 +205,21 @@ If any changes are requested, update your branch locally, commit the changes, an
 
 To keep your fork synchronized with the original repository, make sure to regularly update it.
 
-1. Fetch the latest changes from the upstream repository by running:
+1. **Fetch the latest changes from the upstream repository by running:**
    ```shell
    git fetch upstream
    ```
-2. Merge the upstream changes into your local main branch using the following command:
-   ```shell
-   git checkout main
-   ```
+   <br />
+2. **Merge the upstream changes into your local main branch using the following command:**
+   * ```shell
+     git checkout main
+     ```
 
-   ```shell
-   git merge upstream/main
-   ```
-
-3. Push the updated main branch to your fork:
+   * ```shell
+     git merge upstream/main
+     ```
+   <br />
+3. **Push the updated main branch to your fork:**
    ```shell
    git push origin main
    ```
