@@ -63,11 +63,11 @@ Because next to the experienced senior developer, there is always a junior that 
 This `README.md` template embraces this ethos because:
 
 * It is very detailed and clear.
-<br />
-<br />
+  <br />
+  <br />
 * It follows a consistent approach.
-<br />
-<br />
+  <br />
+  <br />
 * It emphasizes the "Explain Like I'm Five" philosophy.
 
 This template contains placeholders and can be customized as needed!
